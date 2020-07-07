@@ -5,3 +5,4 @@ set(CMAKE_C_STANDARD 11)
 
 add_executable(mat main.cpp)
 add_executable(Matrix matrix.c)
+add_executable(SizeOne  SizeOne.c)
