@@ -11,8 +11,9 @@
 void reverse(char *str);
 
 void reverse(char *str) {
-    char *first = str;
-    char *end = strlen(str) + str - 1;
+    char *first = str;//指向字符串的首地址
+    char *end = strlen(str) + str - 1;//指向字符串的尾地址
+    //交换首地址和尾地址对应的值
     while (first < end) {
         char tmp = *first;
         *first = *end;
