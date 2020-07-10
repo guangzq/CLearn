@@ -12,3 +12,6 @@
 elf文件是linux系统中的可执行重定位文件，学习elf文件的组成，包括
 头、程序表、段有助于为后面的hook打基础,学习路径通过《程序员的自我修养-链接、装载与库》
 
+> 思考[elf_hook](https://github.com/shoumikhin/ELF-Hook/blob/master/elf_hook.c)解析的关键点在哪里
+
+
