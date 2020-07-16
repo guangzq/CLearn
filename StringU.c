@@ -34,12 +34,34 @@ char *my_strcpy(char *destStr, const char *srcStr) {
  */
 char *my_strcat(char *destStr, const char *srcStr) {
     if (destStr == NULL || srcStr == NULL) return NULL;
-    while(*destStr != '\0') {
+    while (*destStr != '\0') {
         destStr++;//因为字符串指向的是首地址
     }
     while ((*destStr++ = *srcStr++) != '\0') {
     }
     return destStr;
+}
+
+/**
+ * 字符串包含
+ * @param str
+ * @param subStr
+ * @return
+ */
+const char *my_strstr(const char *str, const char *subStr) {
+    const char *str1;
+    const char *subStr1;
+    while (*str) {
+        str1 = str;
+        subStr1 = subStr;
+        while (*str1++ == *subStr1++) {
+            if (!*subStr1) {//到了子串的最后位置
+                return str;
+            }
+        }
+        str++;
+    }
+    return NULL;
 }
 
 int main(void) {
@@ -49,10 +71,10 @@ int main(void) {
     printf("destStr %s\n", destStr);
     printf("strcpy destStr-> %s\n", my_strcpy(destStr, srcStr));
     memset(destStr, 0, ARR_LENGTH);//将内存设定为指定的值
-    my_strcat(destStr, "hi ");
+    my_strcat(destStr, "this is a ");
     my_strcat(destStr, "string ");
     printf("strcat destStr-> %s\n", destStr);
-
+    printf("strcat strStr-> %s\n", my_strstr(destStr, "a"));
     return 0;
 }
 
