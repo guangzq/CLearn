@@ -83,6 +83,13 @@ const char *my_strchr(const char *str, int chrStr) {
 }
 
 
+/**
+ * 将srcStr数组的前size字节复制到destStr数组中
+ * @param destStr
+ * @param srcStr
+ * @param size
+ * @return
+ */
 char *my_memcpy(char *destStr, char *srcStr, int size) {
     char *destStr1 = destStr;
     char *srcStr1 = srcStr;
