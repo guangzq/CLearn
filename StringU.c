@@ -64,6 +64,45 @@ const char *my_strstr(const char *str, const char *subStr) {
     return NULL;
 }
 
+/**
+ * 字符出现位置
+ * @param str
+ * @param chrStr
+ * @return
+ */
+const char *my_strchr(const char *str, int chrStr) {
+    const char *str1;
+    while (*str) {
+        str1 = str;
+        while (*++str1 == chrStr) {//逐个字符比对
+            return str1;
+        }
+        str++;
+    }
+    return 0;
+}
+
+
+char *my_memcpy(char *destStr, char *srcStr, int size) {
+    char *destStr1 = destStr;
+    char *srcStr1 = srcStr;
+    if (destStr1 < srcStr1 + size && destStr1 < srcStr1) {//向前复制，现在不太理解？
+        destStr1 = destStr1 + size;
+        srcStr1 = srcStr1 + size;
+        while (size > 0) {
+            *destStr1-- = *srcStr1--;
+            size--;
+        }
+    } else {//向后复制
+        while (size > 0) {
+            *destStr1++ = *srcStr1++;
+            size--;
+        }
+    }
+    return destStr;
+}
+
+
 int main(void) {
     char *srcStr = "this is a string";
     char destStr[ARR_LENGTH];
@@ -75,6 +114,7 @@ int main(void) {
     my_strcat(destStr, "string ");
     printf("strcat destStr-> %s\n", destStr);
     printf("strcat strStr-> %s\n", my_strstr(destStr, "a"));
+    printf("strcat my_strchr-> %s\n", my_memcpy(destStr, "hello", 2));
     return 0;
 }
 
