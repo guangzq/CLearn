@@ -21,7 +21,7 @@ typedef struct UserInfo {
 };
 
 
-//int main() {
+//int main(int argc, char *argv[]) {
 //    FILE *file = fopen("../filetext", "r");
 //    if (file == NULL) {
 //        printf("open file error");
@@ -37,10 +37,4 @@ typedef struct UserInfo {
 //    fclose(file);
 //    return 0;
 //}
-
-int main(void) {
-    char *p = "abc";
-    printf("%s", p);
-    return 0;
-}
 
