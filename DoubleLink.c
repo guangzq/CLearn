@@ -1,6 +1,9 @@
 //
 // Created by qiguang.zhu on 2020/7/31.
 //
+/**
+ * 双向链表 {@link http://data.biancheng.net/view/167.html}
+ */
 #include <stdio.h>
 #include <stdlib.h>
 

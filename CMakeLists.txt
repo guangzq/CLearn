@@ -3,7 +3,7 @@ project(mat)
 
 set(CMAKE_C_STANDARD 11)
 
-add_executable(mat main.c)
+add_executable(mat main.cpp)
 add_executable(Matrix matrix.c)
 add_executable(SizeOne  SizeOne.c)
 add_executable(ReversalStr ReversalStr.c)
@@ -13,3 +13,4 @@ add_executable(DoubleLink DoubleLink.c)
 add_executable(Mmaping Mmaping.c)
 add_executable(StringU StringU.c)
 add_executable(FileTest FileTest.c)
+add_executable(dns dns.c)
