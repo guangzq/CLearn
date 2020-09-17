@@ -23,6 +23,8 @@ void commd_get(struct sockaddr_in, char *);
 
 void commd_put(struct sockaddr_in, char *);
 
+int getPortNum(char *buf);
+
 int sockfd;
 
 int main(int argc, char *argv[]) {
@@ -49,7 +51,7 @@ int main(int argc, char *argv[]) {
     //login
     sprintf(buffer, "USER %s\r\n", "ftptest");
     send(sockfd, buffer, strlen(buffer), 0);
-    sprintf(buffer, "PASS %s\r\n",  "123");
+    sprintf(buffer, "PASS %s\r\n", "123");
     int login_size = send(sockfd, buffer, strlen(buffer), 0);
     if (login_size > 0) {
         printf("login success\n");
@@ -197,10 +199,17 @@ void commd_get(struct sockaddr_in addr, char *commd) {
 **实现文件的上传
 */
 void commd_put(struct sockaddr_in addr, char *commd) {
-    int fd;
-    int sockfd;
     char buffer[N];
-    int nbytes;
+    //解析数据端口
+//    int a,b,c,d,pa,pb,*port;
+//    char ipaddr[32];
+//    char *find = strrchr(buffer, '(');
+//    sscanf(find, "(%d,%d,%d,%d,%d,%d)", &a, &b, &c, &d, &pa, &pb);
+//    sprintf(ipaddr, "%d.%d.%d.%d", a, b, c, d);
+    int port = getPortNum(buffer);
+    addr.sin_port = htons(port);
+//    sprintf(buffer, "PORT\r\n");
+//    send(sockfd, buffer, strlen(buffer), 0);
     //创建套接字
     if ((sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         printf("Socket Error!\n");
@@ -211,26 +220,46 @@ void commd_put(struct sockaddr_in addr, char *commd) {
         printf("Connect Error!\n");
         exit(1);
     }
-    //从commd中读取N字节数据，写入套接字中
-    if (write(sockfd, commd, N) < 0) {
-        printf("Wrtie Error!At commd_put 1\n");
-        exit(1);
-    }
-    //open函数从(commd+4)中，读取文件路径，以只读的方式打开
-    if ((fd = open("/mnt/c/ftp/zqg_1602.txt", O_RDONLY)) < 0) {
-        printf("Open Error!\n");
-        exit(1);
-    }
-    //从fd指向的文件中读取N个字节数据
-    while ((nbytes = read(fd, buffer, N)) > 0) {
-        //从buffer中读取nbytes字节数据，写入套接字中
-        if (write(sockfd, buffer, nbytes) < 0) {
-            printf("Write Error!At commd_put 2");
-        }
-    }
+    //login
+    sprintf(buffer, "USER %s\r\n", "ftptest");
     send(sockfd, buffer, strlen(buffer), 0);
-    close(fd);
+    sprintf(buffer, "PASS %s\r\n", "123");
+    int login_size = send(sockfd, buffer, strlen(buffer), 0);
+    if (login_size > 0) {
+        printf("login success\n");
+    }
+
+    //PASV
+    sprintf(buffer, "PASV\r\n");
+    send(sockfd, buffer, strlen(buffer), 0);
+    //STOR 上传命令
+    sprintf(buffer, "STOR %s\r\n", "/zqg/zqg_1055.txt");
+    send(sockfd, buffer, strlen(buffer), 0);
     close(sockfd);
 
     return;
+}
+
+
+int getPortNum(char *buf) {
+    int num1 = 0, num2 = 0;
+
+    char *p = buf;
+    int cnt = 0;
+    while (1) {
+        if (cnt == 4 && (*p) != ',') {
+            num1 = 10 * num1 + (*p) - '0';
+        }
+        if (cnt == 5) {
+            num2 = 10 * num2 + (*p) - '0';
+        }
+        if ((*p) == ',') {
+            cnt++;
+        }
+        p++;
+        if ((*p) == ')') {
+            break;
+        }
+    }
+    return num1 * 256 + num2;
 }
