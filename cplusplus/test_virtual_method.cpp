@@ -14,21 +14,31 @@ public:
         this->x = x;
         this->y = y;
     }
+
+    virtual ~Point() {
+        cout << "point des constructor" << endl;
+    }
+
     virtual double area() {
         return 0;
     }
 };
-class Circle: public Point {
+
+class Circle : public Point {
 private:
     int x1;
     int x2;
     int x3;
 public:
-    Circle(int d,int e, int f) {
-        this ->x1 = d;
+    Circle(int d, int e, int f) {
+        this->x1 = d;
         x2 = e;
         x3 = f;
     }
+    ~Circle() {
+        cout<<"circle des constructor"<<endl;
+    }
+
     double area() {
         return 3.14 * x1 * x2;
     }
@@ -36,14 +46,17 @@ public:
 
 int main() {
     Point A(10, 11);
-    cout<<A.area()<<endl;
-    Circle B(2, 6, 7);
-    cout<<B.area()<<endl;
-    Point *D;
-    D = &B;
-    cout<<D->area()<<endl;
-    Point &p = B;
-    cout<<p.area()<<endl;
+//    cout << A.area() << endl;
+//    Circle B(2, 6, 7);
+//    cout << B.area() << endl;
+//    Point *D;
+//    D = &B;
+//    cout << D->area() << endl;
+//    Point &p = B;
+//    cout << p.area() << endl;
+    Point *d;
+    d = new Circle(1, 2, 5);
+    delete d;
     return 0;
 }
 
