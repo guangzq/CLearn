@@ -8,22 +8,13 @@ using namespace std;
 class Solution {
 public:
     bool findNumberIn2DArray(vector<vector<int>> &matrix, int target) {
-        if (matrix.empty() || matrix[0].empty()) {
-            return false;
-        }
-        if (matrix.size() == 1 && matrix[0][0] == target) {
-            return true;
-        }
-        for (int i = 0; i < matrix.size(); ++i) {
-            if (i + 1 < matrix.size()) {
-                if (target > matrix[0][i] && target < matrix[0][i + 1]) {
-                    for (int j = 0; j < matrix[i][j]; ++j) {
-                        if (target == matrix[i][j]) {
-                            return true;
-                        }
-                    }
-                }
-            }
+        if(matrix.size() == 0 || matrix[0].size() == 0) return false;
+        int i = matrix.size() -1;//行
+        int j=0;
+        while(i>=0&&j<=matrix[0].size()-1){
+            if(matrix[i][j]>target) {i--;}
+            else if(matrix[i][j]<target){ j++;}
+            else {return true;}
         }
         return false;
     }
