@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 project(mat)
 
-set(CMAKE_C_STANDARD 11)
+set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 add_executable(mat main.cpp)
 add_executable(Matrix matrix.c)
@@ -15,6 +15,7 @@ add_executable(StringU StringU.c)
 add_executable(FileTest FileTest.c)
 add_executable(dns dns.c)
 add_executable(cplusplus cplusplus/test_1001.cpp)
+add_executable(LruCache cplusplus/LruCache.cpp)
 add_executable(offer offer/offer_03.cpp)
 add_executable(offer_04 offer/offer_04.cpp)
 add_executable(test_virtual_method cplusplus/test_virtual_method.cpp)
