@@ -154,3 +154,8 @@ Output:
 * 如果标记位大于target,则行--
 * 如果小于，则列++
 * 如果相等，则返回true
+
+### [05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)
+因为在**C++中string是可变的**，所以可以采用原地算法
+* 先扩容字符串长度到 原长度+2*空格数量
+* 然后倒序遍历，修改闭区间[j-2,j]的值为“%20”
