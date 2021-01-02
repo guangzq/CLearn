@@ -159,3 +159,7 @@ Output:
 因为在**C++中string是可变的**，所以可以采用原地算法
 * 先扩容字符串长度到 原长度+2*空格数量
 * 然后倒序遍历，修改闭区间[j-2,j]的值为“%20”
+
+### [29. 顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
+定义left、right、top、bottom四个边界，每个遍历完，就缩进一个
+
