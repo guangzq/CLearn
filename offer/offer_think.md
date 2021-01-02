@@ -163,3 +163,6 @@ Output:
 ### [29. 顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
 定义left、right、top、bottom四个边界，每个遍历完，就缩进一个
 
+### [50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
+无序map,采用hash表存储数据；有序map,采用红黑树，此题可用无序，如果数据量大的重复时，用有序的链表结构map,时间复杂度为O（logn）
+
