@@ -166,11 +166,13 @@ Output:
 ### [50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
 无序map,采用hash表存储数据；有序map,采用红黑树，此题可用无序，如果数据量大的重复时，用有序的链表结构map,时间复杂度为O（logn）
 
-## 
+## 栈队列堆
 ### [9. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 关键点：栈底对应队头，栈顶对应队尾，所以如果想让队头出队，就相当于让栈底出栈，那方法就是把该
 栈的全部元素都放到另外一个新栈中，新栈栈顶即对应队首
-- [30. 包含 min 函数的栈](30.%20包含%20min%20函数的栈.md)
+
+### [30. 包含 min 函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/)
+利用额外辅助栈，来维护非严格降序栈
 - [31. 栈的压入、弹出序列](31.%20栈的压入、弹出序列.md)
 - [40. 最小的 K 个数](40.%20最小的%20K%20个数.md)
 - [41.1 数据流中的中位数](41.1%20数据流中的中位数.md)
