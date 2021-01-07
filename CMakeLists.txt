@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 project(mat)
 
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
-
+file(GLOB SOURCE *.cpp *.h)
 add_executable(mat main.cpp)
 add_executable(Matrix matrix.c)
 add_executable(SizeOne  SizeOne.c)
