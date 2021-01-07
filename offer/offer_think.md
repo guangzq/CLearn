@@ -159,3 +159,25 @@ Output:
 因为在**C++中string是可变的**，所以可以采用原地算法
 * 先扩容字符串长度到 原长度+2*空格数量
 * 然后倒序遍历，修改闭区间[j-2,j]的值为“%20”
+
+### [29. 顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
+定义left、right、top、bottom四个边界，每个遍历完，就缩进一个
+
+### [50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
+无序map,采用hash表存储数据；有序map,采用红黑树，此题可用无序，如果数据量大的重复时，用有序的链表结构map,时间复杂度为O（logn）
+
+## 栈队列堆
+### [9. 用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
+关键点：栈底对应队头，栈顶对应队尾，所以如果想让队头出队，就相当于让栈底出栈，那方法就是把该
+栈的全部元素都放到另外一个新栈中，新栈栈顶即对应队首
+
+### [30. 包含 min 函数的栈](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/)
+利用额外辅助栈，来维护非严格降序栈
+### [31. 栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
+利用辅助栈模拟出入栈，
+* 入栈，判断栈顶和弹栈序列的对应值相等则出栈，直到栈为空，则为弹栈序列
+- [40. 最小的 K 个数](40.%20最小的%20K%20个数.md)
+- [41.1 数据流中的中位数](41.1%20数据流中的中位数.md)
+- [41.2 字符流中第一个不重复的字符](41.2%20字符流中第一个不重复的字符.md)
+- [59. 滑动窗口的最大值](59.%20滑动窗口的最大值.md)
+
