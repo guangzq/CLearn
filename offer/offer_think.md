@@ -184,5 +184,5 @@ Output:
 * 如果是奇数，则返回A或B的堆顶值，如果是偶数，则返回两数之和/2
 
 - [41.2 字符流中第一个不重复的字符](41.2%20字符流中第一个不重复的字符.md)
-- [59. 滑动窗口的最大值](59.%20滑动窗口的最大值.md)
+### [59. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof)
 
