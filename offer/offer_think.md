@@ -178,11 +178,19 @@ Output:
 * 入栈，判断栈顶和弹栈序列的对应值相等则出栈，直到栈为空，则为弹栈序列
 ### [40. 最小的 K 个数](40.%20最小的%20K%20个数.md)
 堆是一个优先级队列，每个根节点数都比其子节点数大或小，也是具有大顶堆或小顶堆的完全二叉树
-### [41.1 数据流中的中位数](https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/)
+### [41 数据流中的中位数](https://leetcode-cn.com/problems/shu-ju-liu-zhong-de-zhong-wei-shu-lcof/)
 将全部数分为两部分，较小的一部分用大顶堆A存，较大的一部分用小顶堆B存，
 * 如果A和B size不相等，则想将num push到B中，在pop到A中
 * 如果是奇数，则返回A或B的堆顶值，如果是偶数，则返回两数之和/2
+###  [41.2 字符流中第一个不重复的字符](41.2%20字符流中第一个不重复的字符.md)
+### [59. 滑动窗口的最大值](59.%20滑动窗口的最大值.md)
+暂时跳过
 
-- [41.2 字符流中第一个不重复的字符](41.2%20字符流中第一个不重复的字符.md)
-### [59. 滑动窗口的最大值](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof)
+## 双指针
+看labuladong的题解
+### [57 和为 S 的两个数字](https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof/)
+* 一个指针指向0，一个指针指向end,依据条件移动
+- [57.2 和为 S 的连续正数序列](57.2%20和为%20S%20的连续正数序列.md)
+- [58.1 翻转单词顺序列](58.1%20翻转单词顺序列.md)
+- [58.2 左旋转字符串](58.2%20左旋转字符串.md)
 
