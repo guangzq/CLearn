@@ -190,7 +190,8 @@ Output:
 看labuladong的题解
 ### [57 和为 S 的两个数字](https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof/)
 * 一个指针指向0，一个指针指向end,依据条件移动
-- [57.2 和为 S 的连续正数序列](57.2%20和为%20S%20的连续正数序列.md)
+### [57.2 和为 S 的连续正数序列](https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/)
+* 左右指针均从1开始，如果sum<target,则right右移，如果>,则left右移，如果相等，则赋值，left并右移
 - [58.1 翻转单词顺序列](58.1%20翻转单词顺序列.md)
 - [58.2 左旋转字符串](58.2%20左旋转字符串.md)
 
