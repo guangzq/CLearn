@@ -206,10 +206,15 @@ while(head != NULL) {
     head = head->next;
   }
 ```
+* 如何删除一个节点
+```
+pre->next=cur->next;
+```
 
 ## [6. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/submissions/)
 利用辅助栈先进后出的思路
-- [18.1 在 O(1) 时间内删除链表节点](18.1%20在%20O(1)%20时间内删除链表节点.md)
+## [18.1 在 O(1) 时间内删除链表节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
+思路：利用双指针
 - [18.2 删除链表中重复的结点](18.2%20删除链表中重复的结点.md)
 - [22. 链表中倒数第 K 个结点](22.%20链表中倒数第%20K%20个结点.md)
 - [23. 链表中环的入口结点](23.%20链表中环的入口结点.md)
