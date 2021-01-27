@@ -199,6 +199,7 @@ Output:
 
 ## 链表
 一些通用写法
+* 借助双指针思想
 * 如何遍历一个单链表
 ```
 while(head != NULL) {
@@ -216,7 +217,8 @@ pre->next=cur->next;
 ## [18.1 在 O(1) 时间内删除链表节点](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
 思路：利用双指针
 - [18.2 删除链表中重复的结点](18.2%20删除链表中重复的结点.md)
-- [22. 链表中倒数第 K 个结点](22.%20链表中倒数第%20K%20个结点.md)
+- [22. 链表中倒数第 K 个结点](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
+快慢双指针，快指针先走k步，则快慢指针相距k,然后再同时走，当快指针指向尾结点时，返回慢指针
 - [23. 链表中环的入口结点](23.%20链表中环的入口结点.md)
 - [24. 反转链表](24.%20反转链表.md)
 - [25. 合并两个排序的链表](25.%20合并两个排序的链表.md)
