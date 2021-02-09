@@ -227,5 +227,6 @@ pre->next=cur->next;
 双指针+新增虚拟伪头指针，比较l1->val与l2->val
 ### [35. 复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
 利用哈希表的查询特点，节点作为键值对
-### [52. 两个链表的第一个公共结点](52.%20两个链表的第一个公共结点.md)
+### [52. 两个链表的第一个公共结点](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)
+两个链表各做l1+l2+公共部分的时候就会相遇
 
