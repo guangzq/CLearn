@@ -238,8 +238,10 @@ pre->next=cur->next;
 ### [27. 二叉树的镜像](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
 递归
 ### [28. 对称的二叉树](28.%20对称的二叉树.md)
-- [32.1 从上往下打印二叉树](32.1%20从上往下打印二叉树.md)
-- [32.2 把二叉树打印成多行](32.2%20把二叉树打印成多行.md)
+### [32.1 从上往下打印二叉树](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-lcof/)
+利用队列先进先出的特点
+### [32.2 把二叉树打印成多行](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-ii-lcof/)
+利用队列，len(queue)>0分层
 - [32.3 按之字形顺序打印二叉树](32.3%20按之字形顺序打印二叉树.md)
 - [33. 二叉搜索树的后序遍历序列](33.%20二叉搜索树的后序遍历序列.md)
 - [34. 二叉树中和为某一值的路径](34.%20二叉树中和为某一值的路径.md)
