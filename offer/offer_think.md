@@ -246,7 +246,8 @@ pre->next=cur->next;
 ### [32.3 按之字形顺序打印二叉树](https://leetcode-cn.com/problems/cong-shang-dao-xia-da-yin-er-cha-shu-iii-lcof/)
 ### [33. 二叉搜索树的后序遍历序列](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)
 根据二叉搜索树的特性
-- [34. 二叉树中和为某一值的路径](34.%20二叉树中和为某一值的路径.md)
+### [34. 二叉树中和为某一值的路径](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/)
+利用vector来记录path+先序遍历
 - [36. 二叉搜索树与双向链表](36.%20二叉搜索树与双向链表.md)
 - [37. 序列化二叉树](37.%20序列化二叉树.md)
 - [54. 二叉查找树的第 K 个结点](54.%20二叉查找树的第%20K%20个结点.md)
