@@ -234,6 +234,13 @@ pre->next=cur->next;
 二叉搜索树定义： 左子树中所有节点的值 << 根节点的值；右子树中所有节点的值 >> 根节点的值；其左、右子树也分别为二叉搜索树。
 前中后序遍历根据“根”的位置，比如前序为根左右，根在前
 * 二叉搜索树的中序遍历是递增数列
+```
+dfs(TreeNode* root) {
+    dfs(root->left);
+    print(root->val);
+    dfs(root->right);
+}
+```
 ### [7. 重建二叉树](7.%20重建二叉树.md)
 ### [8. 二叉树的下一个结点](8.%20二叉树的下一个结点.md)
 ### [26. 树的子结构](26.%20树的子结构.md)
@@ -251,8 +258,9 @@ pre->next=cur->next;
 利用vector来记录path+先序遍历
 ### [36. 二叉搜索树与双向链表](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/)
 二叉搜索树的中序遍历是递增数列
-- [37. 序列化二叉树](37.%20序列化二叉树.md)
-- [54. 二叉查找树的第 K 个结点](54.%20二叉查找树的第%20K%20个结点.md)
+### [37. 序列化二叉树 （困难）](https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof/)
+### [54. 二叉查找树的第 K 个结点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/)
+* 利用二叉搜索树的中序遍历结果是递增序列的特点
 - [55.1 二叉树的深度](55.1%20二叉树的深度.md)
 - [55.2 平衡二叉树](55.2%20平衡二叉树.md)
 - [68. 树中两个节点的最低公共祖先](68.%20树中两个节点的最低公共祖先.md)
