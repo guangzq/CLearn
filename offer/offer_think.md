@@ -241,6 +241,9 @@ dfs(TreeNode* root) {
     dfs(root->right);
 }
 ```
+**二叉树遍历方式**
+* 深度遍历：前中后
+* 层序遍历
 ### [7. 重建二叉树](7.%20重建二叉树.md)
 ### [8. 二叉树的下一个结点](8.%20二叉树的下一个结点.md)
 ### [26. 树的子结构](26.%20树的子结构.md)
@@ -261,7 +264,9 @@ dfs(TreeNode* root) {
 ### [37. 序列化二叉树 （困难）](https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof/)
 ### [54. 二叉查找树的第 K 个结点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/)
 * 利用二叉搜索树的中序遍历结果是递增序列的特点
-- [55.1 二叉树的深度](55.1%20二叉树的深度.md)
-- [55.2 平衡二叉树](55.2%20平衡二叉树.md)
+### [55.1 二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/)
+等于左子树深度和右子树深度最大值+1
+### [55.2 平衡二叉树](https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/)
+最容易想到的方法就是根据左右子树深度差判断
 - [68. 树中两个节点的最低公共祖先](68.%20树中两个节点的最低公共祖先.md)
 
