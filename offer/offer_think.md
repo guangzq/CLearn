@@ -268,5 +268,7 @@ dfs(TreeNode* root) {
 等于左子树深度和右子树深度最大值+1
 ### [55.2 平衡二叉树](https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/)
 最容易想到的方法就是根据左右子树深度差判断
-- [68. 树中两个节点的最低公共祖先](68.%20树中两个节点的最低公共祖先.md)
+### [68.1 树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
+* 如果p,q都在左子树，则遍历至root.left
+* 如果q,q都在右子树，则遍历至root.right
 
