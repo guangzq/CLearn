@@ -271,4 +271,6 @@ dfs(TreeNode* root) {
 ### [68.1 树中两个节点的最低公共祖先](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
 * 如果p,q都在左子树，则遍历至root.left
 * 如果q,q都在右子树，则遍历至root.right
+### [68.2 二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
+
 
